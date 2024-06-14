@@ -37,6 +37,7 @@ namespace Dream_Notes
             this.loginClose = new System.Windows.Forms.Button();
             this.addNoteBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginPic)).BeginInit();
             this.SuspendLayout();
@@ -71,10 +72,10 @@ namespace Dream_Notes
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gabriola", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(46, -3);
+            this.label1.Font = new System.Drawing.Font("MV Boli", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(41, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 35);
+            this.label1.Size = new System.Drawing.Size(123, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Dream Notes";
             // 
@@ -87,7 +88,7 @@ namespace Dream_Notes
             this.loginMinimze.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginMinimze.Location = new System.Drawing.Point(647, 0);
             this.loginMinimze.Name = "loginMinimze";
-            this.loginMinimze.Size = new System.Drawing.Size(32, 32);
+            this.loginMinimze.Size = new System.Drawing.Size(32, 31);
             this.loginMinimze.TabIndex = 2;
             this.loginMinimze.UseVisualStyleBackColor = false;
             this.loginMinimze.Click += new System.EventHandler(this.loginMinimze_Click);
@@ -115,7 +116,7 @@ namespace Dream_Notes
             this.addNoteBtn.Name = "addNoteBtn";
             this.addNoteBtn.Size = new System.Drawing.Size(82, 73);
             this.addNoteBtn.TabIndex = 1;
-            this.addNoteBtn.Text = "+ Add Note";
+            this.addNoteBtn.Text = "Add Note";
             this.addNoteBtn.UseVisualStyleBackColor = false;
             this.addNoteBtn.Click += new System.EventHandler(this.addNoteBtn_Click);
             // 
@@ -127,12 +128,23 @@ namespace Dream_Notes
             this.flowLayoutPanel1.Size = new System.Drawing.Size(578, 407);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(327, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Your Notes";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(707, 489);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.addNoteBtn);
             this.Controls.Add(this.loginPanel);
@@ -145,6 +157,7 @@ namespace Dream_Notes
             this.loginPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginPic)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -157,6 +170,7 @@ namespace Dream_Notes
         private System.Windows.Forms.PictureBox loginPic;
         private System.Windows.Forms.Button addNoteBtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
