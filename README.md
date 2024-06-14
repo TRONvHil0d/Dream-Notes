@@ -6,4 +6,4 @@ Download [here](https://github.com/sunrise1907/Dream-Notes/releases).
   - Dream-Notes -> Release -> Dream-Notes.exe
 
 
-~sunrise1907
+~batutandoga
