@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,19 @@ namespace Dream_Notes
     public partial class Form1 : Form
     {
         private List<Note> notes = new List<Note>();
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        public static extern IntPtr CreateRoundRectRgn(
+             int nleft,
+             int nTop,
+             int nRight,
+             int nBottom,
+             int nWidthEllipse,
+             int nHeightEllipse
+
+
+            );
+        
+        
         public Form1()
         {
             InitializeComponent();
@@ -54,6 +68,7 @@ namespace Dream_Notes
             {
                 Text = note.Title,
                 Font = new Font("Arial", 12, FontStyle.Bold),
+                ForeColor = Color.GhostWhite,
                 Dock = DockStyle.Top,
                 Height = 25
             };
@@ -64,7 +79,8 @@ namespace Dream_Notes
                 Dock = DockStyle.Fill,
                 AutoSize = true,
                 Font = new Font("Arial", 10, FontStyle.Regular),
-                MaximumSize = new Size(480, 0), 
+                ForeColor = Color.White,
+                MaximumSize = new Size(480, 0),
                 TextAlign = ContentAlignment.TopLeft
             };
 
@@ -72,6 +88,7 @@ namespace Dream_Notes
             {
                 Text = note.CreatedAt.ToString("dd MMM yyyy"),
                 Font = new Font("Arial", 8, FontStyle.Italic),
+                ForeColor = Color.Gray,
                 Dock = DockStyle.Bottom,
                 Height = 20
             };
@@ -80,7 +97,11 @@ namespace Dream_Notes
                 Text = "Sil",
                 TextAlign = ContentAlignment.MiddleCenter,
                 Dock = DockStyle.Right,
-                Width = 50
+                Width = 50,
+                Height=50,
+                ForeColor = Color.Gray,
+                FlatStyle = FlatStyle.Flat,
+                
             };
             deleteButton.Click += (sender, e) =>
             {
@@ -131,16 +152,23 @@ namespace Dream_Notes
 
         private void addNoteBtn_Click(object sender, EventArgs e)
         {
+            addNoteBtn.TextAlign = ContentAlignment.MiddleCenter; 
            
             using (AddNoteForm addNoteForm = new AddNoteForm())
             {
                 if (addNoteForm.ShowDialog() == DialogResult.OK)
-                {        
+                {
                     notes.Add(addNoteForm.NewNote);
                     SaveNotes();
                     DisplayNotes();
                 }
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            addNoteBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, addNoteBtn.Width, addNoteBtn.Height, 10,10));
+
         }
 
         private void loginPanel_MouseDown(object sender, MouseEventArgs e)
@@ -149,5 +177,6 @@ namespace Dream_Notes
             MoveX = e.X;
             MoveY = e.Y;
         }
+
     }
 }
