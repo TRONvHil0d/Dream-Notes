@@ -12,9 +12,9 @@ This is a simple note-taking application built with C# Windows Forms. Users can 
 
 ## Screenshots
 
-![Main Screen](C:\Users\batuh\Pictures\DreamImg\mainpage.png)
-![Add Note](C:\Users\batuh\Pictures\DreamImg\addpage.png)
-![Edit Note](C:\Users\batuh\Pictures\DreamImg\editpage.png)
+![Main Screen](https://github.com/batutandoga/Dream-Notes/blob/master/DreamImg/mainpage.png)
+![Add Note](https://github.com/batutandoga/Dream-Notes/blob/master/DreamImg/addpage.png)
+![Edit Note](https://github.com/batutandoga/Dream-Notes/blob/master/DreamImg/editpage.png)
 
 ## Installation
 
