@@ -60,7 +60,7 @@ namespace Dream_Notes
             {
                 BorderStyle = BorderStyle.FixedSingle,
                 Width = 530,
-                Height = 150,
+                Height = 160,
                 Margin = new Padding(10)
             };
 
@@ -80,7 +80,7 @@ namespace Dream_Notes
                 AutoSize = true,
                 Font = new Font("Arial", 10, FontStyle.Regular),
                 ForeColor = Color.White,
-                MaximumSize = new Size(480, 0),
+                MaximumSize = new Size(450, 0),
                 TextAlign = ContentAlignment.TopLeft
             };
 
@@ -92,15 +92,21 @@ namespace Dream_Notes
                 Dock = DockStyle.Bottom,
                 Height = 20
             };
+            Panel buttonPanel = new Panel
+            {
+                Dock = DockStyle.Right,
+                Width = 80,
+                Height = 140
+            };
             Button deleteButton = new Button
             {
-                Text = "Sil",
+                Text = "Delete",
                 TextAlign = ContentAlignment.MiddleCenter,
-                Dock = DockStyle.Right,
-                Width = 50,
-                Height=50,
+                Dock = DockStyle.Top,
+                Size = new Size(70, 30),
+                Location = new Point(5, 70),
                 ForeColor = Color.Gray,
-                FlatStyle = FlatStyle.Flat,
+                FlatStyle = FlatStyle.Flat
                 
             };
             deleteButton.Click += (sender, e) =>
@@ -108,12 +114,38 @@ namespace Dream_Notes
                 notes.Remove(note);
                 SaveNotes();
                 DisplayNotes();
+
+            };
+            Button editButton = new Button
+            {
+                Text = "Edit",
+                TextAlign = ContentAlignment.MiddleCenter,
+                Dock = DockStyle.Top,
+                Size = new Size(70, 30),
+                Location = new Point(5, 30),
+                ForeColor = Color.Gray,
+                FlatStyle = FlatStyle.Flat
             };
 
+            editButton.Click += (sender, e) =>
+            {
+                var editNoteForm = new EditNoteForm(note);
+                if (editNoteForm.ShowDialog() == DialogResult.OK)
+                {
+                    SaveNotes();
+                    DisplayNotes();
+                }
+            };
+
+            buttonPanel.Controls.Add(editButton);
+            buttonPanel.Controls.Add(deleteButton);
+
+            notePanel.Controls.Add(buttonPanel);
             notePanel.Controls.Add(contentLabel);
             notePanel.Controls.Add(titleLabel);
             notePanel.Controls.Add(dateLabel);
-            notePanel.Controls.Add(deleteButton);
+            
+            
 
             return notePanel;
         }

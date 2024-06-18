@@ -147,6 +147,8 @@ namespace Dream_Notes
             this.addMinimize.BackColor = System.Drawing.Color.Transparent;
             this.addMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.addMinimize.FlatAppearance.BorderSize = 0;
+            this.addMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
+            this.addMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
             this.addMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addMinimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(161)))));
             this.addMinimize.Location = new System.Drawing.Point(749, 0);
@@ -162,6 +164,8 @@ namespace Dream_Notes
             this.addClose.BackColor = System.Drawing.Color.Transparent;
             this.addClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.addClose.FlatAppearance.BorderSize = 0;
+            this.addClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.addClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.addClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(161)))));
             this.addClose.Location = new System.Drawing.Point(778, 0);

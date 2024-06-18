@@ -71,6 +71,8 @@ namespace Dream_Notes
             this.loginMinimze.BackColor = System.Drawing.Color.Transparent;
             this.loginMinimze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.loginMinimze.FlatAppearance.BorderSize = 0;
+            this.loginMinimze.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
+            this.loginMinimze.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
             this.loginMinimze.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginMinimze.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(161)))));
             this.loginMinimze.Location = new System.Drawing.Point(656, 0);
@@ -86,6 +88,8 @@ namespace Dream_Notes
             this.loginClose.BackColor = System.Drawing.Color.Transparent;
             this.loginClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.loginClose.FlatAppearance.BorderSize = 0;
+            this.loginClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.loginClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.loginClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(119)))), ((int)(((byte)(161)))));
             this.loginClose.Location = new System.Drawing.Point(685, 0);

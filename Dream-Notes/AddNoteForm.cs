@@ -29,7 +29,7 @@ namespace Dream_Notes
         {
             InitializeComponent();
             titleTextBox.MaxLength = 25;
-            contentTextBox.MaxLength = 365; 
+            contentTextBox.MaxLength = 365;
             contentTextBox.TextChanged += contentTextBox_TextChanged;
         }
 
@@ -49,8 +49,7 @@ namespace Dream_Notes
         private void contentTextBox_TextChanged(object sender, EventArgs e)
         {
 
-            
-            label4.Text = $"Character: {contentTextBox.Text.Length} /365";
+            label4.Text = $"Character: {contentTextBox.Text.Length} / 365";
         }
 
 
@@ -85,6 +84,7 @@ namespace Dream_Notes
         private void AddNoteForm_Load(object sender, EventArgs e)
         {
             addBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, addBtn.Width, addBtn.Height, 10, 10));
+            label4.Text = "Character: 0 / 365";
         }
 
 
