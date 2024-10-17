@@ -12,15 +12,15 @@ This is a simple note-taking application built with C# Windows Forms. Users can 
 
 ## Screenshots
 
-![Main Screen](https://github.com/batutandoga/Dream-Notes/blob/master/DreamImg/mainpage.png)
-![Add Note](https://github.com/batutandoga/Dream-Notes/blob/master/DreamImg/addpage.png)
-![Edit Note](https://github.com/batutandoga/Dream-Notes/blob/master/DreamImg/editpage.png)
+![Main Screen](https://github.com/TRONvHil0d/Dream-Notes/blob/master/DreamImg/mainpage.png)
+![Add Note](https://github.com/TRONvHil0d/Dream-Notes/blob/master/DreamImg/addpage.png)
+![Edit Note](https://github.com/TRONvHil0d/Dream-Notes/blob/master/DreamImg/editpage.png)
 
 ## Installation
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/batutandoga/Dream-Notes.git
+    git clone https://github.com/TRONvHil0d/Dream-Notes.git
     ```
 
 2. Open the project in Visual Studio.
